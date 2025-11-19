@@ -16,7 +16,7 @@ def binary_search(arr, target):
         else:
             high = mid -1 #it should move back to the left hand side to search for the target
             
-    return mid, steps
+    return -1, steps
 
 arr = [1, 5, 7, 20, 90, 40, 55]
 target = 90
