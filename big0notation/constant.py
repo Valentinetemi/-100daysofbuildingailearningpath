@@ -24,3 +24,14 @@ print(name1)
 school = "Hmm, we go to school to learn"
 school_words = school.split()
 print(school_words)
+
+
+myPython.insert(0, "J")
+print(myPython)
+
+myPython.pop()
+
+myPython.remove("o")
+myPython.extend("j")
+myPython.count("p")
+print(myPython)
