@@ -5,6 +5,8 @@ cap = cv2.VideoCapture(0) # It tells opencv to open the default camera. we are g
 while True:
     ret, frame = cap.read() #ret return true if it was able to read the frame correctly, while frame returns an image object. from the camera
     
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # to change from color image to grayscale
+    
     cv2.imshow('frame',  frame) # this displays the frame in a window called 'frame', it updates very fast so it looks like a video
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
