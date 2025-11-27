@@ -7,7 +7,8 @@ while True:
     
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # to change from color image to grayscale
     
-    cv2.imshow('frame',  frame) # this displays the frame in a window called 'frame', it updates very fast so it looks like a video
+    
+    cv2.imshow('frame',  gray) # this displays the frame in a window called 'frame', it updates very fast so it looks like a video
     
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break # this breaks out of the loop when q is pressed
