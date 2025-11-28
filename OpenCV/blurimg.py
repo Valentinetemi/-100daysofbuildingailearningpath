@@ -12,10 +12,13 @@ blurred_img = cv2.imwrite("blurred.jpg", img)
 
 gaussian_blur = cv2.GaussianBlur(img, (k_size, k_size) , 3) #the gaussian blur 
 
+median_blur = cv2.medianBlur(img, k_size) # median blur
+
 
 
 cv2.imshow("image", img)
 cv2.imshow("Blurred Image", blurred_img)
-
+cv2.imshow("Gaussian Blur", gaussian_blur)
+cv2.imshow("Median Blur", median_blur)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
