@@ -13,6 +13,6 @@ k = cv2.waitKey(0) #we will capyure the key press and then close it and destroy 
 if k == ESC_KEY: 
     cv2.destroyAllWindows()
     
-elif k == ord('s'):
+elif k == ord('j'):
     img2 = cv2.imwrite('lena_copy.jpg', img ) #we use the same image we save as the one we want to write a cpoy for
     cv2.destroyAllWindows()
