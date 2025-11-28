@@ -3,3 +3,6 @@ import cv2
 
 img = cv2.imread('lena.jpg')
 print(type(img))
+
+images = cv2.imread('lena.jpg')
+print(images.shape)
