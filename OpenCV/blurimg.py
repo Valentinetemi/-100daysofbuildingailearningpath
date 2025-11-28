@@ -10,7 +10,7 @@ cv2.blur(img, (k_size, k_size)) # function to apply blur effect on image
 
 blurred_img = cv2.imwrite("blurred.jpg", img)
 
-gaussian_blur = cv2.GaussianBlur(img, (k_size, k_size) , 0) #the gaussian blur 
+gaussian_blur = cv2.GaussianBlur(img, (k_size, k_size) , 3) #the gaussian blur 
 
 
 
