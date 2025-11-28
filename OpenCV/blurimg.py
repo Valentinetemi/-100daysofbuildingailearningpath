@@ -13,6 +13,7 @@ blurred_img = cv2.imwrite("blurred.jpg", img)
 gaussian_blur = cv2.GaussianBlur(img, (k_size, k_size) , 0) #the gaussian blur 
 
 
+
 cv2.imshow("image", img)
 cv2.imshow("Blurred Image", blurred_img)
 
