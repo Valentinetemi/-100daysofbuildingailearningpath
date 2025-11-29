@@ -12,7 +12,7 @@ cv.rectangle(img, (100, 150), (300, 450), (0, 0, 255), 5) #-1 for fill the recta
 
 
 #circle
-cv.circle(img, (600, 700), 100, (0, 255, 255), 6) #circle(image, center of circle, radius, color in BGR format, thickness)
+cv.circle(img, (200, 300), 28, (255, 0, 0), 10) #circle(image, center of circle, radius, color in BGR format, thickness)
 
 
 #text
