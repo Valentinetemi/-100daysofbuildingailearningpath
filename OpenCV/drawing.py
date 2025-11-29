@@ -16,6 +16,7 @@ cv.circle(img, (200, 300), 170, (255, 0, 0), 10) #circle(image, center of circle
 
 
 #text
+cv.putText(img, "Hello World!", (100, 200), cv.FONT_HERSHEY_COMPLEX_SMALL, 2.5, (255, 255, 0), 8) #putText(image, text to be written on image, position where we want to write it, font type and size, color in BGR format, thickness)
 
 
 cv.imshow("img", img)
