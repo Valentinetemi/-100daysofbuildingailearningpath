@@ -28,9 +28,9 @@ while True:
     if bbox is not None:
         x1, y1, x2, y2 = bbox
         
-    frame =  cv.rectangle(frame,(x1,y1),(x2,y2), (255, 255,0), 5)
+        frame =  cv.rectangle(frame, (x1, y1),(x2, y2), (255, 255,0), 7)
     
-    cv.imshow("frame", mask)
+    cv.imshow("frame", frame)
     
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
