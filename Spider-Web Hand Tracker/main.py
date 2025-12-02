@@ -42,11 +42,17 @@ while True:
             #draw the spider-web on the frame(connect all the point to each there)
             for i in range(0, len(points), 4): # thicker web spacing
                 for j in range(i + 4, len(points), 4): #connect every 4th point to the next 4th point
-                    cv.line(frame, points[i], points[j], (0,255,255), 2)
+                    #generate color for the line based on the distance between the points
+                    color = (
+                        (i * 12) % 255,
+                        (j * 7) % 255,
+                        (i + j * 5) % 255
+                    )
+                    cv.line(frame, points[i], points[j], color, 2)
         else:
             None
             
-    #show webcame
+    #show webcam
     cv.imshow("Spider-Web hand tracker", frame)
     
     if cv.waitKey(1) & 0xFF == ord('q'):
