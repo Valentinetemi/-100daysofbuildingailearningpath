@@ -40,14 +40,15 @@ while True:
                 points.append((x,y))
                 
             #draw the spider-web on the frame(connect all the point to each there)
-            for i in range(0, len(points), 4): # thicker web spacing
-                for j in range(i + 4, len(points), 4): #connect every 4th point to the next 4th point
+            for i in range(0, len(points), 3): # thicker web spacing
+                for j in range(i + 2, len(points), 3): #connect every 2nd point to the next 2ndpoint
                     #generate color for the line based on the distance between the points
-                    color = (
-                        (i * 12) % 255,
-                        (j * 7) % 255,
-                        (i + j * 5) % 255
-                    )
+                    #crystal gradient color (glass-like effect)
+                    r =int(128 + 127 * (i / len(points)))
+                    g = int(200 + 55 * ((i + j ) % 3))
+                    b = int(255 * (j / len(points)))
+                    color = (b % 255, g % 255, r % 255)
+                    
                     cv.line(frame, points[i], points[j], color, 2)
         else:
             None
