@@ -32,11 +32,11 @@ while True:
             y = int(hand_landmarks.landmark[8].y * frame.shape[0])
             
             #Draw a small dot on the fingertips
-            cv.circle(frame, (x, y), 5, (0, 255, 0), -1)
+            cv.circle(frame, (x, y), 5, (255, 255, 0), -1)
             
             #draw line only if finger moved( not stationary)
             if prev_x != 0  and prev_y != 0:
-                cv.line(canvas, (prev_x, prev_y), (x, y), (0, 255, 0), 2) #draw a line from the previous point to the current points
+                cv.line(canvas, (prev_x, prev_y), (x, y), (255, 255, 0), 4) #draw a line from the previous point to the current points
                 
             #update previous position
             prev_x, prev_y = x, y
