@@ -28,5 +28,33 @@ while True:
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
             #Get index finger landmark (landmark 8)
+            x = int(hand_landmarks.landmark[8].x * frame.shape[1])
+            y = int(hand_landmarks.landmark[8].y * frame.shape[0])
+            
+            #Draw a small dot on the fingertips
+            cv.circle(frame, (x, y), 5, (0, 255, 0), -1)
+            
+            #draw line only if finger moved( not stationary)
+            if prev_x != 0  and prev_y != 0:
+                cv.line(canvas, (prev_x, prev_y), (x, y), (0, 255, 0), 2)
+                
+            #update previous position
+            prev_x, prev_y = x, y
+            
+    else:
+        #If hand disappeared, reset previous points so drawing doesn't jump
+        prev_x, prev_y = 0, 0
+        
+        #combine canvas with original frame
+        combined = cv.add(frame, canvas)
+        
+        cv.imshow('Hand Drawing', combined)
+        
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            break
+        
+        
+cap.release()
+cv.destroyAllWindows()
             
     
