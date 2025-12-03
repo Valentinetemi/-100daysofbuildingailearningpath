@@ -46,11 +46,11 @@ while True:
         prev_x, prev_y = 0, 0
         
         #combine canvas with original frame
-        combined = cv.add(frame, canvas)
+    combined = cv.add(frame, canvas)
         
-        cv.imshow('Hand Drawing', combined)
+    cv.imshow('Hand Drawing', combined)
         
-        if cv.waitKey(5) & 0xFF == ord('q'):
+    if cv.waitKey(5) & 0xFF == ord('q'):
             break
         
         
