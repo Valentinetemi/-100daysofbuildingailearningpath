@@ -12,12 +12,12 @@ print(f"Original Size, {w}x{h}")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #covert to grayscale
 
 
-blur = cv2.GaussianBlur(gray, ( 18, 18),0) #to blur the image and reduce noise
+blur = cv2.GaussianBlur(gray, ( 7, 7),0) #to blur the image and reduce noise
 
-_, scanned = cv2.threshold(blur, 0, 1, cv2.THRESH_BINARY + cv2.THRESH_OTSU) # to convert from grayscale to binary image
+_, scanned = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU) # to convert from grayscale to binary image
 
 new_width =500
-new_height = 600
+new_height = 700
 scanned_resize = cv2.resize(img, (new_width, new_height))
 
 cv2.imshow("Original size", img)
