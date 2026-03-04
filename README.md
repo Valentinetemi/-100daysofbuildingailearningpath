@@ -23,9 +23,10 @@ This repo is my **live notebook** — open, transparent, and updated **daily**.
 | **Python** | Core language for AI & robotics | ✅ |
 | **OpenCV** | Process camera feeds, detect objects | ✅ |
 | **DSA** | Efficient algorithms (trees, graphs, sorting) | ✅ |
-| **Linear Algebra** | Matrices, transformations, image processing | 🔄 |
-| **Calculus** | Optimization, gradients, motion | 🔄 |
-| **Robotics** | Kinematics, control systems, simulation | ⏳ |
-| **AI/ML** | YOLO, neural nets, training on real data | 🔄 |
+| **Linear Algebra** | Matrices, transformations, image processing | ✅  |
+| **Calculus** | Optimization, gradients, motion | ✅  |
+| **Robotics** | Kinematics, control systems, simulation | ✅  |
+| **AI/ML** | YOLO, neural nets, training on real data | ✅  |
 
 ---
+
